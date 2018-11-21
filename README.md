@@ -22,7 +22,7 @@ $ sudo cp -vf ansible.cfg /etc/ansible/
 $ export ANSIBLE_HOST_KEY_CHECKING=False
 
 
-(4). Define/Change the production ip's in 'hosts' file & assign them with groups if needed, but not neccessary.
+(4). Define/Change the production (eth0) ip's in 'hosts' file & assign them with groups if needed, but not neccessary.
 [kmax-servers]
 10.10.x.x
 10.10.x.x
