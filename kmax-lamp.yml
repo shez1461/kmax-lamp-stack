@@ -1,0 +1,16 @@
+---
+- hosts: kmax-servers
+  tasks: 
+  - name: Linux OS Sysinfo [L]
+    command: uname -a
+    register: sysinfo
+  - debug: var=sysinfo.stdout_lines
+
+  - name: Install Apache2 [A]
+    apt: name=apache2 state=latest
+
+  - name: Install MySQL server [M]
+    apt: name=mysql-server state=latest
+
+  - name: Install PHP modules [P]
+    apt: name=php state=latest
